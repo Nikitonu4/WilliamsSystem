@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EncryptController">
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#encrypt" text="Зашифровать">
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </Button>
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#decrypt" text="Расшифровать" />
+         </children>
+         <BorderPane.margin>
+            <Insets left="60.0" top="25.0" />
+         </BorderPane.margin>
+      </HBox>
+   </center>
+   <top>
+      <Label prefHeight="103.0" prefWidth="362.0" text="Криптосистема Вильямса" textAlignment="CENTER" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+   </top>
+</BorderPane>
