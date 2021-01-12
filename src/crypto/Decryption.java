@@ -1,7 +1,7 @@
 package crypto;
 
 public class Decryption extends MathsMethods {
-    private long C, C1, C2, n, s, k, M;
+    private long M; //число до 5 разрядов(дальше long переполняется)
 
     public Decryption(long C, long C1, long C2, long n, long s, long k) {  //расшифровка
         long startTime = System.currentTimeMillis();

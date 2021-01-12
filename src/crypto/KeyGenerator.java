@@ -23,19 +23,6 @@ public class KeyGenerator extends MathsMethods{ //генерация всех к
         System.out.println("Генерация ключей завершена!");
     }
 
-//    private static long[] generateKeys(long M) {
-//        long[] keys = new long[5];
-
-
-
-//        keys[0] = p;
-//        keys[1] = q;
-//        keys[2] = n;
-//        keys[3] = s;
-//        keys[4] = k;
-//        return keys;
-//    }
-
     // Генераторы ключей
     private static long generateP(long M) { //генерируем p
         long p = randomIntInRange(M + 1, M + 1000); // генерируем простое число от M+1
@@ -59,14 +46,6 @@ public class KeyGenerator extends MathsMethods{ //генерация всех к
             s = randomIntInRange(2, 10);
         }
         return s;
-    }
-
-    public long getP() {
-        return p;
-    }
-
-    public long getQ() {
-        return q;
     }
 
     public long getN() {
