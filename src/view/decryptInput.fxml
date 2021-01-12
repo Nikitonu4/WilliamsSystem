@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DecryptInputController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="inputC" focusTraversable="false" prefHeight="20.0" prefWidth="100.0" promptText="Введите C">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="40.0" right="40.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="inputC1" focusTraversable="false" prefHeight="20.0" prefWidth="100.0" promptText="Введите C1">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="40.0" right="40.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="inputC2" focusTraversable="false" prefHeight="20.0" prefWidth="100.0" promptText="Введите C2">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="40.0" right="40.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="inputN" focusTraversable="false" prefHeight="20.0" prefWidth="100.0" promptText="Введите n">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="40.0" right="40.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="inputS" focusTraversable="false" prefHeight="20.0" prefWidth="100.0" promptText="Введите s">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="40.0" right="40.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="inputK" focusTraversable="false" prefHeight="20.0" prefWidth="100.0" promptText="Введите k">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="40.0" right="40.0" />
+               </VBox.margin>
+            </TextField>
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#decryptInputButton" text="Расшифровать">
+               <VBox.margin>
+                  <Insets left="150.0" />
+               </VBox.margin>
+            </Button>
+            <Label fx:id="mComplete" prefHeight="17.0" prefWidth="383.0" text="Расшифрованное число: ">
+               <VBox.margin>
+                  <Insets left="50.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <VBox prefHeight="152.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="103.0" prefWidth="388.0" text="Расшифровка из текста" textAlignment="CENTER">
+               <font>
+                  <Font size="32.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="391.0" text="Введите секретные параметры криптосистемы">
+               <VBox.margin>
+                  <Insets left="50.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>

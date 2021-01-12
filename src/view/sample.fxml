@@ -5,21 +5,34 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Controller">
    <center>
-      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <HBox prefHeight="72.0" prefWidth="395.0" BorderPane.alignment="CENTER">
          <children>
-            <Button focusTraversable="false" mnemonicParsing="false" onAction="#encrypt" text="Зашифровать">
+            <VBox prefHeight="97.0" prefWidth="304.0" spacing="15.0">
+               <children>
+                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#encryptFile" prefHeight="27.0" prefWidth="210.0" text="Зашифровать из файла" />
+                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#decryptFile" prefHeight="27.0" prefWidth="210.0" text="Расшифровать из файла" />
+               </children>
                <HBox.margin>
-                  <Insets right="50.0" />
+                  <Insets left="50.0" right="10.0" />
                </HBox.margin>
-            </Button>
-            <Button focusTraversable="false" mnemonicParsing="false" onAction="#decrypt" text="Расшифровать" />
+            </VBox>
+            <VBox prefHeight="97.0" prefWidth="284.0" spacing="15.0">
+               <children>
+                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#encryptInput" prefHeight="27.0" prefWidth="210.0" text="Зашифровать из поля ввода" />
+                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#decryptInput" prefHeight="27.0" prefWidth="210.0" text="Расшифровать из поля ввода" />
+               </children>
+               <HBox.margin>
+                  <Insets right="2.0" />
+               </HBox.margin>
+            </VBox>
          </children>
          <BorderPane.margin>
-            <Insets left="60.0" top="25.0" />
+            <Insets />
          </BorderPane.margin>
       </HBox>
    </center>
