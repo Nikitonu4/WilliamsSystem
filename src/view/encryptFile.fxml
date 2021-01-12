@@ -17,7 +17,7 @@
                   <Insets left="120.0" />
                </VBox.margin>
             </Button>
-            <Button focusTraversable="false" maxWidth="150.0" mnemonicParsing="false" onAction="#decryptFileButton" text="Зашифровать">
+            <Button focusTraversable="false" maxWidth="150.0" mnemonicParsing="false" onAction="#encryptFileButton" text="Зашифровать">
                <VBox.margin>
                   <Insets left="120.0" top="15.0" />
                </VBox.margin>

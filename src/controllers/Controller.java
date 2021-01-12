@@ -18,27 +18,22 @@ import javafx.stage.Stage;
 public class Controller {
 
     @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
-
-    @FXML
-    void decryptFile(ActionEvent event) {
+    void decryptFile() {
+        newWindow("decryptFile");
     }
 
     @FXML
-    void decryptInput(ActionEvent event) {
+    void decryptInput() {
         newWindow("decryptInput");
     }
 
     @FXML
-    void encryptFile(ActionEvent event) {
+    void encryptFile() {
         newWindow("encryptFile");
     }
 
     @FXML
-    void encryptInput(ActionEvent event) {
+    void encryptInput() {
         newWindow("encryptInput");
     }
 

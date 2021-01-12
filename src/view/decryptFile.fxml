@@ -6,23 +6,23 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-
 <?import javafx.scene.text.Text?>
-<BorderPane fx:id="borderPaneFileEnc" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EncryptFileController">
+
+<BorderPane fx:id="borderPaneFileEnc" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DecryptFileController">
    <center>
       <VBox prefHeight="154.0" prefWidth="400.0" BorderPane.alignment="CENTER">
          <children>
-            <Button focusTraversable="false" maxWidth="150.0" mnemonicParsing="false" onAction="#fileChooseEnc" text="Выбрать файл">
+            <Button focusTraversable="false" maxWidth="150.0" mnemonicParsing="false" onAction="#fileChooseDec" text="Выбрать файл">
                <VBox.margin>
                   <Insets left="120.0" />
                </VBox.margin>
             </Button>
-            <Button focusTraversable="false" maxWidth="150.0" mnemonicParsing="false" onAction="#decryptFileButton" text="Зашифровать">
+            <Button focusTraversable="false" maxWidth="150.0" mnemonicParsing="false" onAction="#decryptFileButton" text="Расшифровать">
                <VBox.margin>
                   <Insets left="120.0" top="15.0" />
                </VBox.margin>
             </Button>
-            <Text fx:id="fileM" focusTraversable="false" text=" ">
+            <Text fx:id="fileM" focusTraversable="false" text=" " wrappingWidth="263.6689453125">
                <VBox.margin>
                   <Insets left="120.0" top="15.0" />
                </VBox.margin>
@@ -33,7 +33,7 @@
    <top>
       <VBox prefHeight="69.0" prefWidth="400.0" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="title" prefHeight="60.0" prefWidth="384.0" text="Зашифровка из файла" textAlignment="CENTER">
+            <Label fx:id="title" prefHeight="60.0" prefWidth="384.0" text="Расшифровка из файла" textAlignment="CENTER">
                <font>
                   <Font size="32.0" />
                </font>

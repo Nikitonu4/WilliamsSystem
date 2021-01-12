@@ -5,6 +5,7 @@ import java.io.*;
 import java.util.Arrays;
 import java.util.List;
 
+import crypto.Decryption;
 import crypto.Encryption;
 import crypto.KeyGenerator;
 import javafx.fxml.FXML;
@@ -14,7 +15,7 @@ import javafx.stage.FileChooser;
 
 public class DecryptFileController {
     private Desktop desktop = Desktop.getDesktop();
-    private int[] array = null;
+    private long[] keys = new long[6];
     private boolean flag = true;
     final FileChooser fileChooser = new FileChooser();
 
@@ -25,29 +26,22 @@ public class DecryptFileController {
     private Text fileM;
 
     @FXML
-    void decryptFileButton() throws IOException { //нажатие кнопки зашифровать
+    void decryptFileButton() throws IOException { //нажатие кнопки расшифровать
 
-        //генерация ключей
-        KeyGenerator keyGen = new KeyGenerator(array[0]);
-        System.out.println(keyGen.toString());
+        Decryption decryption = new Decryption(keys[0], keys[1], keys[2], keys[3], keys[4], keys[5]);
+        fileM.setText(decryption.toString());
 
-        //шифрование
-        Encryption encryption = new Encryption(array[0], keyGen.getN(), keyGen.getS());
-        System.out.println(encryption.toString());
-
-        //открываем файл для записи зашифрованных данных
+        //открываем файл для записи расшифрованного числа
         File file = fileChooser.showOpenDialog(borderPaneFileEnc.getScene().getWindow());
         FileWriter writer = new FileWriter(file.getAbsolutePath(), false);
-        //записываем данные в файл
-        writer.write(encryption.getC() + "," + encryption.getC1() + "," + encryption.getC2() +
-                "," + keyGen.getN() + "," + keyGen.getS() + "," + keyGen.getK()+
-                "\n"+"(C, C1, C2, n, s, k)");
+        //записываем расшифрованное число в файл
+        writer.write(""+decryption.getM());
         writer.flush(); //закрываем поток
         openFile(file); //открываем файл
     }
 
     @FXML
-    void fileChooseEnc() {
+    void fileChooseDec() { //открытие файла с зашифрованными данными
         fileChooser.getExtensionFilters().addAll(
                 new FileChooser.ExtensionFilter("TXT", "*.txt"));
         File file = fileChooser.showOpenDialog(borderPaneFileEnc.getScene().getWindow());
@@ -64,20 +58,20 @@ public class DecryptFileController {
 
         for (File file : files) {
             try (BufferedReader in = new BufferedReader(new FileReader(file.getAbsolutePath()))) {
-                array = in.lines().mapToInt(Integer::parseInt).toArray();
+                String[] str = in.readLine().split(",");
+                for (int i = 0; i < 6; i++) {
+                    keys[i] = Long.parseLong(str[i]);
+                }
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
-        if ((int) (Math.log10(array[0]) + 1) > 5) { //сколько цифр в числе
-            flag = false;
-            fileM.setText("Надо меньше 6 цифр!");
-        } else {
-            fileM.setText("Шифрование числа: " + array[0]);
-        }
+//        return keys;
     }
+
+
 
     private void openFile(File file) {
         try {

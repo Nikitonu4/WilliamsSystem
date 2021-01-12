@@ -28,7 +28,7 @@ public class EncryptFileController {
     private Text fileM;
 
     @FXML
-    void decryptFileButton() throws IOException { //нажатие кнопки зашифровать
+    void encryptFileButton() throws IOException { //нажатие кнопки зашифровать
 
         //генерация ключей
         KeyGenerator keyGen = new KeyGenerator(array[0]);
