@@ -6,7 +6,7 @@ public class Encryption extends MathsMethods {
     private long C, C1, C2, M1;
 
     public Encryption(long M, long n, long s) { //зашифрование
-        System.out.println("\nЗАШИФРОВКА ТЕКСТА: " + M);
+        System.out.println("ЗАШИФРОВКА ТЕКСТА: " + M);
         if (jacobySign(M, n) == -1) { /* символ Якоби принимает значения -1 или 1
                                            (0 на этапе подбора p и q отсекается) */
             C1 = 1;                     // (-1) в любой нечетной степени == -1 (-1^1 = -1)

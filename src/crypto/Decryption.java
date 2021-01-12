@@ -6,8 +6,9 @@ public class Decryption extends MathsMethods {
     public Decryption(long C, long C1, long C2, long n, long s, long k) {  //расшифровка
         long startTime = System.currentTimeMillis();
 
-        System.out.println("\nРАСШИФРОВКА КРИПТОТЕКСТА" +
-                " С КЛЮЧАМИ (C, C1, C2): (" + C + ", " + C1 + ", " + C2 + ")");
+        System.out.println("РАСШИФРОВКА КРИПТОТЕКСТА" +
+                " С КЛЮЧАМИ (C, C1, C2, n, s, k): (" + C + ", " + C1 + ", " + C2 + ", "+ n+", "+s+", "+
+                k+")");
         long M2 = powModuleInt(C, k, n);
 
         if (C2 == 0) { //M2 должно быть четным
@@ -20,7 +21,6 @@ public class Decryption extends MathsMethods {
             }
         }
 
-//        long M;
         // вычисляем исходный текст
         if (C1 == 1) {
             long pow = getExtendGCD(s, n); //обратный элемент

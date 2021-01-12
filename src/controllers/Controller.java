@@ -1,13 +1,7 @@
 package controllers;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
-import java.util.Scanner;
 
-import crypto.KeyGenerator;
-import crypto.MathsMethods;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -41,7 +35,7 @@ public class Controller {
     void initialize() {
     }
 
-    protected void newWindow(String windowName) {
+    protected void newWindow(String windowName) { //открытие модального окна
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("../view/" + windowName + ".fxml"));
         try {

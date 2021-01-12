@@ -35,7 +35,7 @@ public class DecryptFileController {
         File file = fileChooser.showOpenDialog(borderPaneFileEnc.getScene().getWindow());
         FileWriter writer = new FileWriter(file.getAbsolutePath(), false);
         //записываем расшифрованное число в файл
-        writer.write(""+decryption.getM());
+        writer.write("" + decryption.getM());
         writer.flush(); //закрываем поток
         openFile(file); //открываем файл
     }
@@ -68,10 +68,7 @@ public class DecryptFileController {
                 e.printStackTrace();
             }
         }
-//        return keys;
     }
-
-
 
     private void openFile(File file) {
         try {

@@ -12,14 +12,14 @@
    <center>
       <VBox prefHeight="154.0" prefWidth="400.0" BorderPane.alignment="CENTER">
          <children>
-            <Button focusTraversable="false" maxWidth="150.0" mnemonicParsing="false" onAction="#fileChooseDec" text="Выбрать файл">
+            <Button focusTraversable="false" maxWidth="200.0" mnemonicParsing="false" onAction="#fileChooseDec" text="Выбрать файл">
                <VBox.margin>
-                  <Insets left="120.0" />
+                  <Insets left="100.0" />
                </VBox.margin>
             </Button>
-            <Button focusTraversable="false" maxWidth="150.0" mnemonicParsing="false" onAction="#decryptFileButton" text="Расшифровать">
+            <Button focusTraversable="false" maxWidth="200.0" mnemonicParsing="false" onAction="#decryptFileButton" text="Расшифровать в файл">
                <VBox.margin>
-                  <Insets left="120.0" top="15.0" />
+                  <Insets left="100.0" top="15.0" />
                </VBox.margin>
             </Button>
             <Text fx:id="fileM" focusTraversable="false" text=" " wrappingWidth="263.6689453125">
