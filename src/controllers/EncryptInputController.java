@@ -40,7 +40,7 @@ public class EncryptInputController {
     private Label paramK;
 
     @FXML
-    void decryptInputButton(ActionEvent event) {
+    void decryptInputButton() {
         String mText = inputM.getText();
         long M = Long.parseLong(mText);
         KeyGenerator keyGen = new KeyGenerator(M);
@@ -48,7 +48,7 @@ public class EncryptInputController {
         System.out.println(keyGen.toString());
 
         Encryption encryption = new Encryption(M, keyGen.getN(), keyGen.getS());
-        encryption.toString();
+        System.out.println(encryption.toString());
 
         paramC.setText("C:  "+encryption.getC());
         paramC1.setText("C1:  "+encryption.getC1());

@@ -39,7 +39,7 @@ public class Encryption extends MathsMethods {
 
     @Override
     public String toString() {
-        return "M1: " + this.M1 + "\nC1: " + this.C1 + "\nC2: " + this.C2 +"\nC: " + this.C;
+        return "C: " + this.C + "\nC1: " + this.C1 + "\nC2: " + this.C2;
     }
 }
 

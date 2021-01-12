@@ -2,20 +2,17 @@ package controllers;
 
 import java.awt.*;
 import java.io.*;
-import java.net.URL;
 import java.util.Arrays;
 import java.util.List;
-import java.util.ResourceBundle;
 
 import crypto.Encryption;
 import crypto.KeyGenerator;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 
-public class EncryptFileController {
+public class DecryptFileController {
     private Desktop desktop = Desktop.getDesktop();
     private int[] array = null;
     private boolean flag = true;

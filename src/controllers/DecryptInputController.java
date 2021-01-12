@@ -12,12 +12,6 @@ import javafx.scene.control.TextField;
 public class DecryptInputController extends Controller {
 
     @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
-
-    @FXML
     private TextField inputC;
 
     @FXML
@@ -39,7 +33,7 @@ public class DecryptInputController extends Controller {
     private Label mComplete;
 
     @FXML
-    void decryptInputButton(ActionEvent event) {
+    void decryptInputButton() {
         long C = Long.parseLong(inputC.getText());
         long C1 = Long.parseLong(inputC1.getText());
         long C2 = Long.parseLong(inputC2.getText());
